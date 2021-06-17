@@ -1,0 +1,28 @@
+mark {
+
+    background-color:skyblue !important;
+    color:blue !important;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+mark:hover {
+
+    opacity: 1
+}
+
+.center {
+
+    text-align: center;
+
+}
+
+
+body {
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+
+}
+
+        
