@@ -1,16 +1,31 @@
 <html style="min-width:500px;">
 <head><link rel="stylesheet" href="style.css">
-
+<script type="text/javascript" src="mustache.js"></script>
+<script type="text/javascript" src="jquery-3.6.0.min.js"></script>
 </head>
-<body class="center">
+<body>
 
-  <script src="popup.js" charset="utf-8"></script> 
+<script src="popup.js" charset="utf-8"></script> 
 
+<script>
 
+$( document ).ready(function() {
+    console.log( "ready!" );
+});
 
+   $(document.body).append('hello');
     
+        var data = { name: "Jonathan" };
+        var template = "Hello {{ name }}";
+        
+        var text = Mustache.render(template, data);        
     
-    <div id="test"></div>
+        $(".mypanel").append(text)
+
+</script>
+
+
+<div class="mypanel"></div>
 
 </body>
 </html>
