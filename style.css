@@ -1,28 +1,53 @@
 mark {
 
-    background-color:skyblue !important;
-    color:blue !important;
+    background-color:#ceebf4 !important;
     opacity: 0.6;
     transition: 0.3s;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 mark:hover {
-
     opacity: 1
 }
 
 .center {
-
     text-align: center;
-
 }
 
-
 body {
+	color: #323232;
+  	font-size: 1rem;
+  	font-family: "Karla",sans-serif;
+  	font-weight: 400;
+  	line-height: 1.43;
+  	background-color: #fafafa;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 1px solid;
+    border-color: #ceebf4;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;    
+    box-shadow: 2px 2px 2px #ceebf4;   
+}
 
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 25px;
-
+hr {
+	display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ceebf4;
+    margin: 1em 0;
+    padding: 0;    
 }
 
         

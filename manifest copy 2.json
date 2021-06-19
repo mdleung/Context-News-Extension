@@ -31,7 +31,14 @@
 		"resources": ["data/*.json"],
 		"matches": ["*://*/*"],
 		"extension_ids": []
-	   }]
+	   }],
+	   "sandbox": {
+		"pages": ["popup.html","popup.js"]
+	  }
+
+
+	
+		
 	  
 
 		
