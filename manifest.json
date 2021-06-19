@@ -5,9 +5,9 @@
 	"manifest_version": 3,
 	"content_scripts": [
 		{
-			"matches": ["*://*/*"],
+			"matches": ["<all_urls>"],
 			"css": ["style.css"],
-			"js": ["content.js","mark.min.js","jquery-3.6.0.min.js","handlebars-v4.7.7.js"],
+			"js": ["content.js","mark.min.js","jquery-3.6.0.min.js"],
 			"all_frame": true,
 			"run_at": "document_end"
 		}
@@ -26,12 +26,13 @@
 		"storage",
 		"scripting"
 	],
-	"host_permissions": ["*://*/*"],
+	"host_permissions": ["<all_urls>","http://localhost/*"],
 	"web_accessible_resources": [{
 		"resources": ["data/*.json"],
-		"matches": ["*://*/*"],
+		"matches": ["<all_urls>","http://localhost/*"],
 		"extension_ids": []
 	   }]
+		
 	  
 
 		

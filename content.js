@@ -1,7 +1,4 @@
-
- console.log("data")
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
-  
   // Declare regular expressions of content matches
   const re_forgiveness = new RegExp("forgiveness", "gi");
   const re_hunger = new RegExp("hunger", "gi");
@@ -138,7 +135,8 @@ function splitGroup(json) {
 
 
   chrome.runtime.sendMessage({
-    url: window.location.href
+    url: window.location.href,
+    count: matches_love.length,
   });
 
   //important for async
