@@ -26,13 +26,12 @@
 		"storage",
 		"scripting"
 	],
-	"host_permissions": ["<all_urls>","http://localhost/*"],
+	"host_permissions": ["<all_urls>","http://localhost/*","https://facebook.com/*"],
 	"web_accessible_resources": [{
 		"resources": ["data/*.json"],
-		"matches": ["<all_urls>","http://localhost/*"],
+		"matches": ["<all_urls>","http://localhost/*","https://facebook.com/*"],
 		"extension_ids": []
 	   }]
-		
 	  
 
 		

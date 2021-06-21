@@ -73,7 +73,9 @@ document.addEventListener(
 	  icon_like.width = 24;
 	  icon_like.height = 24;
 	  
+
 	  const icon_share = document.createElement('img');
+    icon_share.href = "#";
 	  icon_share.src = "share.png";
 	  icon_share.width = 24;
 	  icon_share.height = 24;
@@ -83,15 +85,26 @@ document.addEventListener(
 	  icon_settings.width = 24;
 	  icon_settings.height = 24;
 	  
+
 	  document.body.appendChild(icon_like);
       document.body.append('            ');
       document.body.appendChild(icon_share);
       document.body.append('            ');
       document.body.appendChild(icon_settings); 
-      
+      document.body.append('            ');
 
 
-      
+
+ 
+      //Jquery Code
+      $('body').append(`<a id="twt" target="_blank" href="https://twitter.com/intent/tweet?text=What does the Bible say about ${taxonomy.toLowerCase()} ? \%0A \%0A${book} ${chapter} : ${verse} \%0A ${res.verse.quote}">`)     
+      $('#twt').append('<img height="24" width="24" title="share the Bible verse with friends" src="assets/share-icons/twitter.png" />')
+      $('body').append('</a>')
+      $('body').append('            ')
+      $('body').append(`<a id="fb" target="_blank" href="">`)     
+      $('#fb').append('<img height="24" width="24" title="share the sermon video" src="assets/share-icons/facebook.png" />')
+      $('body').append('</a>')      
+
 
 
     }
@@ -103,6 +116,11 @@ document.addEventListener(
 
       });
     }
+
+  
+
+
+
   },
   false
 );
