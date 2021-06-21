@@ -18,7 +18,7 @@ document.addEventListener(
       var sermon_church = res.video.sermon_url
       var sermon_location = res.verse.sermon_location
 
-      //alert(taxonomy)
+  
 
       linebreak = document.createElement("br");
       paragraph = document.createElement("br");
@@ -89,6 +89,10 @@ document.addEventListener(
       document.body.append('            ');
       document.body.appendChild(icon_settings); 
       
+
+
+      
+
 
     }
 
