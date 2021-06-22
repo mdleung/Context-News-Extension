@@ -96,16 +96,22 @@ document.addEventListener(
 
 
  
-      //Jquery Code
+      //Share Bible verse on Twitter
       $('body').append(`<a id="twt" target="_blank" href="https://twitter.com/intent/tweet?text=What does the Bible say about ${taxonomy.toLowerCase()} ? \%0A \%0A${book} ${chapter} : ${verse} \%0A ${res.verse.quote}">`)     
       $('#twt').append('<img height="24" width="24" title="share the Bible verse with friends" src="assets/share-icons/twitter.png" />')
       $('body').append('</a>')
       $('body').append('            ')
-      $('body').append(`<a id="fb" target="_blank" href="">`)     
+
+      // Share YouTube Video on Facebook
+      $('body').append(`<a id="fb" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=${res.video.sermon_url}">`)     
       $('#fb').append('<img height="24" width="24" title="share the sermon video" src="assets/share-icons/facebook.png" />')
-      $('body').append('</a>')      
+      $('body').append('</a>') 
+      $('body').append('            ')     
 
-
+      // Share verse on Email
+      $('body').append(`<a id="email" target="_blank" href="mailto:info@example.com?&subject=&cc=&bcc=&body=What does the Bible say about ${taxonomy.toLowerCase()}? \%0A \%0A${book} ${chapter} : ${verse} \%0A ${res.verse.quote}">`)     
+      $('#email').append('Email')
+      $('body').append('</a>')    
 
     }
 
