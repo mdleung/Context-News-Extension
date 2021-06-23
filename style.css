@@ -1,16 +1,7 @@
 mark {
 
     background-color:#ceebf4 !important;
-    opacity: 0.6;
-    transition: 0.3s;
-    padding-top: 5px;
-    padding-right: 5px;
-    padding-bottom: 5px;
-    padding-left: 5px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+
 }
 
 mark:hover {

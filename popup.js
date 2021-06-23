@@ -24,16 +24,20 @@ document.addEventListener(
       paragraph = document.createElement("br");
 
       const div1 = document.createElement("div");
+
       document.body.appendChild(div1);
       div1.textContent = "What does the Bible say about " + taxonomy.toLowerCase() + "?";
       div1.style.fontWeight = "bold";
       div1.style.marginBottom = "10px";
       //document.body.append(book + " " + chapter + ":" + verse, paragraph);
+      // const bibleLink = document.createElement("a");
+      // bibleLink.href = `https://www.biblegateway.com/passage/?search=${book}%20${chapter}:${verse}&version=NIV`
       document.body.append(book + " " + chapter + ":" + verse);
       document.body.append(" says in Scripture:");
       document.body.append(linebreak);
       
       const div2 = document.createElement("div");
+      
       document.body.appendChild(div2);
       //document.body.append('"' + res.verse.quote + '"');
       div2.textContent = '"' + res.verse.quote + '"';
@@ -75,7 +79,7 @@ document.addEventListener(
 	  
 
 	  const icon_share = document.createElement('img');
-    icon_share.href = "#";
+    icon_share.href = `<a id="twt" target="_blank" href="https://twitter.com/intent/tweet?text=What does the Bible say about ${taxonomy.toLowerCase()} ? \%0A \%0A${book} ${chapter} : ${verse} \%0A ${res.verse.quote}">`;
 	  icon_share.src = "share.png";
 	  icon_share.width = 24;
 	  icon_share.height = 24;
@@ -96,22 +100,22 @@ document.addEventListener(
 
 
  
-      //Share Bible verse on Twitter
-      $('body').append(`<a id="twt" target="_blank" href="https://twitter.com/intent/tweet?text=What does the Bible say about ${taxonomy.toLowerCase()} ? \%0A \%0A${book} ${chapter} : ${verse} \%0A ${res.verse.quote}">`)     
-      $('#twt').append('<img height="24" width="24" title="share the Bible verse with friends" src="assets/share-icons/twitter.png" />')
-      $('body').append('</a>')
-      $('body').append('            ')
+      // //Share Bible verse on Twitter
+      // $('body').append(`<a id="twt" target="_blank" href="https://twitter.com/intent/tweet?text=What does the Bible say about ${taxonomy.toLowerCase()} ? \%0A \%0A${book} ${chapter} : ${verse} \%0A ${res.verse.quote}">`)     
+      // $('#twt').append('<img height="24" width="24" title="share the Bible verse with friends" src="assets/share-icons/twitter.png" />')
+      // $('body').append('</a>')
+      // $('body').append('            ')
 
-      // Share YouTube Video on Facebook
-      $('body').append(`<a id="fb" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=${res.video.sermon_url}">`)     
-      $('#fb').append('<img height="24" width="24" title="share the sermon video" src="assets/share-icons/facebook.png" />')
-      $('body').append('</a>') 
-      $('body').append('            ')     
+      // // Share YouTube Video on Facebook
+      // $('body').append(`<a id="fb" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=${res.video.sermon_url}">`)     
+      // $('#fb').append('<img height="24" width="24" title="share the sermon video" src="assets/share-icons/facebook.png" />')
+      // $('body').append('</a>') 
+      // $('body').append('            ')     
 
-      // Share verse on Email
-      $('body').append(`<a id="email" target="_blank" href="mailto:info@example.com?&subject=&cc=&bcc=&body=What does the Bible say about ${taxonomy.toLowerCase()}? \%0A \%0A${book} ${chapter} : ${verse} \%0A ${res.verse.quote}">`)     
-      $('#email').append('Email')
-      $('body').append('</a>')    
+      // // Share verse on Email
+      // $('body').append(`<a id="email" target="_blank" href="mailto:info@example.com?&subject=&cc=&bcc=&body=What does the Bible say about ${taxonomy.toLowerCase()}? \%0A \%0A${book} ${chapter} : ${verse} \%0A ${res.verse.quote}">`)     
+      // $('#email').append('Email')
+      // $('body').append('</a>')    
 
     }
 
