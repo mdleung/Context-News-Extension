@@ -12,6 +12,8 @@ document.addEventListener(
       var chapter = res.verse.chapter
       var verse = res.verse.verse
 
+      console.log(res)
+
       var sermon_url = res.video.sermon_url
       var sermon_title = res.verse.sermon_title
       var sermon_speaker = res.verse.sermon_speaker
@@ -77,9 +79,14 @@ document.addEventListener(
 	  icon_like.width = 24;
 	  icon_like.height = 24;
 	  
+    const share_link = document.createElement('a');
+    //need to use special quotes to render variables within quotes ``
+    share_link.href = `https://twitter.com/intent/tweet?text=What does the Bible say about ${taxonomy.toLowerCase()} ? \%0A \%0A${book} ${chapter} : ${verse} \%0A ${res.verse.quote}`
+    share_link.title = "Share on Twitter"
+    share_link.target = "_blank";
 
 	  const icon_share = document.createElement('img');
-    icon_share.href = `<a id="twt" target="_blank" href="https://twitter.com/intent/tweet?text=What does the Bible say about ${taxonomy.toLowerCase()} ? \%0A \%0A${book} ${chapter} : ${verse} \%0A ${res.verse.quote}">`;
+    icon_share.href = "#";
 	  icon_share.src = "share.png";
 	  icon_share.width = 24;
 	  icon_share.height = 24;
@@ -92,7 +99,8 @@ document.addEventListener(
 
 	  document.body.appendChild(icon_like);
       document.body.append('            ');
-      document.body.appendChild(icon_share);
+      document.body.appendChild(share_link)
+      share_link.appendChild(icon_share);
       document.body.append('            ');
       document.body.appendChild(icon_settings); 
       document.body.append('            ');
