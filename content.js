@@ -40,8 +40,7 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
 
   var data = [bibleVerses,sermonVideos]
 
-  console.log(data)
-  //manifest only allow for loading when on page OTHER THAN localhost (something broken with localhost)
+
  
   var videoJSON
 
@@ -77,7 +76,7 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
       var verses = groupedData[0]
       var video = groupedData[1]
 
-
+      console.log(verses)
 
       switch (word) {
         case "hunger":
@@ -100,11 +99,11 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
       
    
       
-      
+
       
       sendResponse({
-        verse: data[0][Math.floor(Math.random() * data.length)],
-        video: data[1][Math.floor(Math.random() * data.length)]
+        verse: data[0][Math.floor(Math.random() * data[0].length)],
+        video: data[1][Math.floor(Math.random() * data[1].length)]
       });
 
       return true;

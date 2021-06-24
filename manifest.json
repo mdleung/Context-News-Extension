@@ -7,7 +7,7 @@
 		{
 			"matches": ["<all_urls>"],
 			"css": ["style.css"],
-			"js": ["content.js","mark.min.js","jquery-3.6.0.min.js"],
+			"js": ["content.js","mark.min.js","jquery-3.6.0.min.js","bootstrap.min.css","bootstrap.js"],
 			"all_frame": true,
 			"run_at": "document_end"
 		}
